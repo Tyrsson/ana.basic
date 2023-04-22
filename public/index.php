@@ -22,4 +22,4 @@ require AppInterface::UTILS_PATH . DIRECTORY_SEPARATOR . 'Debug.php';
 
 require AppInterface::APP_PATH . DIRECTORY_SEPARATOR . 'functions.php';
 
-sayHi();
+echo sayHi('Mom', false);
