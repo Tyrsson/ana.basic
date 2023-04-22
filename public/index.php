@@ -20,15 +20,6 @@ require __DIR__ . '/../app/AppInterface.php';
 // now we can use the interface to call the paths. Defining them there is easier really ;) and now we can use them to require this class file
 require AppInterface::UTILS_PATH . DIRECTORY_SEPARATOR . 'Debug.php';
 
-// since its been required / included we can now use it ;)
-Debug::dump(AppInterface::APP_PATH, 'APP_PATH');
-Debug::dump(AppInterface::FILES_PATH, 'FILES_PATH');
-Debug::dump(AppInterface::ROOT_PATH, 'ROOT_PATH');
-Debug::dump(AppInterface::UTILS_PATH, 'UTILS_PATH');
-Debug::dump(AppInterface::VIEWS_PATH, 'VIEWS_PATH');
+require AppInterface::APP_PATH . DIRECTORY_SEPARATOR . 'functions.php';
 
-// we can also do this
-$debug = new Debug();
-// It just really serves no purpose ;)
-$debug::dump($debug);
-
+sayHi();
