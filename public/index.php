@@ -10,6 +10,5 @@ require __DIR__ . '/../app/AppInterface.php';
 require AppInterface::APP_PATH . DIRECTORY_SEPARATOR . 'Request.php';
 require AppInterface::ROOT_PATH . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR . 'Renderer.php';
 require AppInterface::UTILS_PATH . DIRECTORY_SEPARATOR . 'Debug.php';
-Debug::dump('just a test');
 echo renderPage();
 
