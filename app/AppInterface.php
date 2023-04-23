@@ -10,5 +10,5 @@ interface AppInterface
     public const ROOT_PATH  = __DIR__ . '/../';
     public const UTILS_PATH = __DIR__ . '/../utils';
     public const VIEWS_PATH = __DIR__ . '/../templates/pages';
-    public const TMPL_EXT   = '.html';
+    public const TMPL_EXT   = '.phtml';
 }

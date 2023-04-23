@@ -1,8 +1,12 @@
 <?php
 include_once __DIR__ . '/../../app/AppInterface.php';
 include_once AppInterface::APP_PATH . DIRECTORY_SEPARATOR . 'functions.php';
-
-echo '<!doctype html>
+/**
+ * If you look closely you will see this is the same exact code that is used in a Laminas layout,
+ * well, pretty close anyway. It of course does not use the helpers because we not using laminas-view
+ */
+?>
+<!doctype html>
 <html class="h-100" data-bs-theme="dark" lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,11 +37,11 @@ echo '<!doctype html>
             <div class="container">
                 <div class="card">
                     <div class="card-header">
-                    ' . getPageName() . '
+                    <?=getPageName()?>
                     </div>
-                    <div id="app-workspace" class="card-body">'
-                    . fetchTemplate() .
-                    '</div>
+                    <div id="app-workspace" class="card-body">
+                    <?=fetchTemplate()?>
+                    </div>
                 </div>
             </div>
         </main>
@@ -45,8 +49,8 @@ echo '<!doctype html>
             <div class="container pb-3 rounded-top bg-body-tertiary">
                 <div class="row pt-2">
                     <div class="col">
-                        &copy;' . date('Y') .
-                        ' <a href="#">Home Page</a> for A Journey In Code
+                        &copy; <?=date('Y')?>
+                        <a href="#">Home Page</a> for A Journey In Code
                     </div>
                 </div>
             </div>
@@ -57,4 +61,4 @@ echo '<!doctype html>
         <script src="/assets/js/pubsub.js"></script>
         <script src="/assets/js/app.js"></script>
     </body>
-</html>';
+</html>
