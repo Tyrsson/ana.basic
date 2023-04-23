@@ -22,22 +22,6 @@
 
 declare(strict_types=1);
 
-use Throwable;
-
-use function basename;
-use function extension_loaded;
-use function htmlspecialchars;
-use function ob_get_clean;
-use function ob_start;
-use function preg_replace;
-use function rtrim;
-use function strlen;
-use function var_dump;
-
-use const ENT_QUOTES;
-use const PHP_EOL;
-use const PHP_SAPI;
-
 /**
  * Concrete class for generating debug dumps related to the output source.
  *
@@ -94,9 +78,9 @@ class Debug
             $label = $label . PHP_EOL;
         }
         try {
-            throw new Throwable();
-        } catch (Throwable $th) {
-            $trace = $th->getTrace();
+            throw new Exception();
+        } catch (Exception $e) {
+            $trace = $e->getTrace();
             $file  = $showFullPath ? $trace[0]['file'] : basename($trace[0]['file']);
             $label .= 'Dumped from file: ' . $file . ' on line: ' . $trace[0]['line'];
         }
