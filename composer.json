@@ -1,0 +1,21 @@
+{
+    "name": "acesn/ana.basic",
+    "description": "example project",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "module/App/src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joey Smith",
+            "email": "jsmith@webinertia.net"
+        }
+    ],
+    "require": {
+        "laminas/laminas-http": "^2.18",
+        "laminas/laminas-view": "^2.27",
+        "webinertia/webinertia-utils": "0.0.10"
+    }
+}
